@@ -23,9 +23,18 @@ describe("pet age", () => {
 describe('growUp', () => {
   it('increases the age by 1', () => {
   const pet = new Pet("Joe");
+  
   pet.growUp();
   expect(pet.age).toEqual(1);
   expect(pet.hunger).toEqual(5);
+  expect(pet.fitness).toEqual(7);
+
+  pet.growUp();
+
+    expect(pet.age).toEqual(2);
+    expect(pet.hunger).toEqual(10);
+    expect(pet.fitness).toEqual(4);
+
   });
 });
 
@@ -33,7 +42,7 @@ decribe('hunger', () => {
   it('has initial hunger of 0', () => {
     const pet = new pet("Joe");
     expect(pet.hunger).toEqual(0);
-    expect(pet.fitness).toEqual(-3);
+    expect(pet.fitness).toEqual(<=3);
   });
 });
 
